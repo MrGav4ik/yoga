@@ -2,6 +2,7 @@
 /* Implementacja fontu z Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 *{
 	transition: 500ms;/*płynne przejścia między wyglądem elementów*/
 }
@@ -64,19 +65,19 @@ body{
 
 /* Style nawigacji desktopowej */
 nav{
-	background-color: #222;
-	position: fixed;/*zamocowanie elementu przy krawędzi okna przeglądarki*/
-	width: 100%;/*przywracamy 100% szer. po utracie przez fixed*/
+	/*position: fixed; zamocowanie elementu przy krawędzi okna przeglądarki*/
+	width: 50%;/*przywracamy 100% szer. po utracie przez fixed*/
+	height: 0;
 	display: flex;
 	justify-content: center;
-	padding: 1rem;
 	box-sizing: border-box;
 	z-index: 1;
+	margin: 0 25%;
 }
 nav ol{
 	display: flex;
 	gap: 1vw;
-	width: 100%;
+	width: 50%;
 	justify-content: space-around;
 	text-align: center;
 }
@@ -84,15 +85,15 @@ nav ol li{
 	flex: 1;
 }
 nav ol li a{
-	padding: 1rem 3vw;
+	padding: 1rem 1vw;
 	display: block;
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: 500;
 	font-size: 1.2rem;
 }
 nav ol li a:hover{
-	background-color: #eee;
+	background-color: #eee; 
 	color: #222;
 	letter-spacing: 5px;
 }
@@ -133,89 +134,260 @@ section{
 	/*flex items*/
 }
 #logo{
-	background-color: #222;
+	position: absolute;
+	top: 10px;
+	background-color: #c9c5b9;
 	color: #fff;
-	font-size: 7rem;
-	height: 15rem;
-	width: 15rem;
+	font-size: 1.2rem;
+	height: 6rem;
+	width: 6rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	font-weight: 100;
+	font-weight: 500;
 }
+
+#yoga {
+	width: 2rem;
+}
+
 #pierwsza h1{
+	position: absolute;
+	top: 35vh;	
 	font-size: 6vw;
-	font-weight: 100;
-	color: #222;
-	margin: 7vh;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 15vh;
 }
 #pierwsza a{
-	color: #333;
+	position: absolute;
+	top: 60vh;
+	color: #fff;
+	background-color: #000;
+	border-radius: 3rem;
+	padding: 0.5rem 2.2vw;
+	margin-left: 50rem;
 }
 #pierwsza a:hover{
 	background-color: #222;
 	color: #fff;
-	border-radius: 1rem;
-	padding: 2rem 5vw;
+}
+
+#pierwsza {
+	background: url("../img/bg1.jpg") no-repeat center;
+	background-size: cover;
+}
+
+#second {
+	margin-top: 15vh;
+	margin-bottom: -15vh;
+	text-align: center;
+	height: 20vh;
+}
+
+#second h1 {
+	margin-top: 5vh;
+	font-size: 3vw;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: #000;
+}
+
+#second h2 {
+	margin-top: 5vh;
+	font-size: 2vw;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+	color: #000;
 }
 
 #druga{
-	background-color: #eee;
+	background-color: #fff;
 }
+
+
 #druga .zawartosc{
 	padding: 1rem;
 	display: flex;
 	gap: 3rem;
 	justify-content: center;
+	flex-direction: row;
 	flex-wrap: nowrap;/*domyślnie*/
 	flex-wrap: wrap;
 }
+
+#article-img {
+	margin: 7vh;
+	width: 5vw;
+}
+
 #druga article{
-	background-color: #fff;
+	text-align: center;
 	border-radius: 1rem;
 	padding: 2rem;
 	/*flex items*/
-	flex: 1 1 300px;
+	flex: 1 1 100px;
 }
 #druga article h2{
 	font-size: 4rem;
-	font-weight: 200;
+	font-weight: 500;
 	color: #222;
 	padding: 1rem 0;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 #druga article p{
 	padding: .5rem 0;
 	font-weight: 300;
 	
 }
+#button {
+	margin: -5vh 0 5vh;
+	display: flex;
+	justify-content: center;
+	gap: 30rem;
+}
+
+#button a {
+	color: #fff;
+	background-color: #aaa;
+	border-radius: 3rem;
+	padding: 0.5rem 2.2vw;
+}
 
 #trzecia{
-	background: url("../img/bg3.jpg") no-repeat center fixed;
-	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
 }
+#trzecia .zawartosc {
+	display: flex;
+	width: 100vw;
+}
+#trzecia .img img{
+	display: flex;
+	height: 40vh;
+	width: 35vw;
+}
+
+#trzecia .text {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	margin: 0 15vh;
+	float: right
+}
+
 #trzecia h3{
-	font-size: 7vw;
-	line-height: 1em;
+	display: inline-block;
 	text-align: center;
-	font-weight: 900;
+	font-size: 3rem;
+	font-weight: 250;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: #000;
+	margin-bottom: 5rem;
+}
+#trzecia p {
+	text-align: center;
+}
+#trzecia .button a {
 	color: #fff;
-	mix-blend-mode: overlay;
+	background-color: #aaa;
+	border-radius: 1.5rem;
+	padding: 1.5rem 2.4vw;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+#btn1 {
+	position: relative;
+	top: 27rem;
+	right: 10rem;
+}
+
+#btn2 {
+	position: relative;
+	top: 53rem;
+	right: 10rem;
 }
 
 #czwarta{
-	background-color: #666;
+	background-color: #fff;
+}
+#czwarta h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 250;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: #000;
+	margin-bottom: 5rem;
+}
+#czwarta .carousel {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+#czwarta .prev, .next {
+	cursor: pointer;
+	position: relative;
+	bottom: 33rem;
+	width: auto;
+	padding: 16px;
+	transition: 0.6s ease;
+
+}
+#czwarta .prev {
+	right: 8rem;
+}
+#czwarta .next {
+	left: 69rem;
+}
+#czwarta .text {
+	margin-top: 2rem;
+	font-size: 2rem;
+	text-align: center;
+	position: relative;
+}
+/*
+.fade {
+	-webkit-animation-name:fade;
+	-webkit-animation-duration:0.5s;
+	animation-name:fade;
+	animation-duration:0.5s;
+}
+@-webkit-keyframes fade {
+	from{opacity:.2}
+	to{opacity:.1}
+}
+*/
+#czwarta .caroulel #image {
+	display:flex;
+	justify-content: center;
+	height: 60vh;
+	width: 50vw;
+}
+#czwarta .dots {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	gap: 1rem;
+	bottom: 5rem;
 }
 
 #piata{
-	background-color: #111;
+	background-color: #343434;
 	color: #fff;
 	font-size: 1.4rem;
-	min-height: 40vh;
+	min-height: 30vh;
 	flex-direction: column;
 	gap: 5vh;
-	padding: 3vh 2rem;
+	padding: 2vh 2rem;
 }
 #piata .zawartosc{
 	display: flex;
@@ -223,25 +395,55 @@ section{
 	gap: 3rem;
 	flex-wrap: wrap;
 	width: 80%;
+	height: 40vh;
+	margin-top: 5rem;
 }
 #piata article{
 	flex: 1 1 200px;
 }
-#piata article h5{
-	font-weight: 800;
-	text-transform: uppercase;
-	color: #555;
-	margin-bottom: 1rem;
+#piata article h1{
+	font-weight: 500;
+	font-size: 6rem;
+	margin-bottom: 2rem;
+	margin-left: 4rem;
 }
-#piata article ol{}
-#piata article ol li{}
-#piata article ol li span{
+#piata article span{
+	margin: 2rem;
+	padding: 1rem;
 	display: inline-block;
-	color: #555;
+	font-weight: 300;
+	font-size: 2rem;
+	text-align: center;
+	line-height: 1em;
 }
-#piata article ul{}
+#piata .media-container {
+	display: inline-block;
+	width: 20vw;
+	margin-top: 5rem;
+	margin-bottom: 0;
+}
+#piata .media{
+	display: flex;
+}
+
+#piata .copyright{
+	position: absolute;
+	bottom: -360vh;
+	left: 40%;
+	color: #fff;
+	font-size: 1.5rem;
+	
+}
+
+#piata .footer-ul {
+	font-size: 2rem;
+	line-height: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	
+}
 #piata article ul li a{
-	color: white;
+	color: #fff;
 	text-align: center;
 }
 #piata article ul li a:hover{
@@ -254,9 +456,12 @@ section{
 	text-decoration: underline;
 }
 
+
+
+/*
 #piata form{}
 
-#piata input:not(#zgody), 
+#piata input:not(#zgody)
 #piata textarea{
 	width: 100%;
 	padding: .5rem;
@@ -289,12 +494,7 @@ section{
 	background-color: white;
 	color: black;
 }
-
-#piata h6{
-	color: #666;
-	font-size: 1.2rem;
-}
-
+*/
 /* STYLE RESPONSYWNE */
 @media all and (max-width:600px){
 	body{
@@ -365,6 +565,9 @@ section{
 		width: 100%;
 		gap: 10vh;
 	}
+	
+	
+	/*
 	#piata input:not(#zgody), 
 	#piata textarea{
 		padding: 1rem;
@@ -376,6 +579,7 @@ section{
 		margin-right: .5rem !important;
 	}
 }
+*/
 /*********************/
 
 
