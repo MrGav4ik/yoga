@@ -6,12 +6,14 @@
 *{
 	transition: 500ms;/*płynne przejścia między wyglądem elementów*/
 }
+
 html{
 	scroll-behavior: smooth;/* płynne przewijanie */
 	font-family: 'Poppins', sans-serif;
 	/* BAZOWY ROZMIAR FONTU */
 	font-size: 10px;
 }
+
 body{
 	font-size: 1.8rem;
 	line-height: 2.6rem;
@@ -20,10 +22,9 @@ body{
 /* Style nawigacji mobilnej */
 .burger{
 	position: fixed;
-	right: 3rem;
+	right: 2rem;
 	top: 3rem;
 	font-size: 4rem;
-	background-color: #ddd;
 	padding: 1rem 1rem 1.8rem;
 	cursor: pointer;
 	display: none;/*ukryj burger na desktop*/
@@ -176,8 +177,9 @@ section{
 }
 
 #pierwsza {
-	background: url("../img/bg1.jpg") no-repeat center;
+	background: url("../img/bg1-full.jpg") no-repeat center;
 	background-size: cover;
+	background-position: 25% 73%;
 }
 
 #second {
@@ -244,6 +246,10 @@ section{
 	font-weight: 300;
 	
 }
+.button-mobile {
+	display: none;
+}
+
 #button {
 	margin: -5vh 0 5vh;
 	display: flex;
@@ -497,9 +503,10 @@ section{
 */
 /* STYLE RESPONSYWNE */
 @media all and (max-width:600px){
-	body{
-		line-height: 2.8rem;
-	}
+	html,body{
+    overflow-x: hidden;
+	line-height: 2.8rem;
+	}	
 	
 	.burger{
 		display: block;/*pokaż burger na mobile*/
@@ -515,27 +522,45 @@ section{
 	}
 	
 	#pierwsza{
-		background-color: #111;
+		margin-top: -29vh;
+		background-image: url("../img/bg1-full.jpg");
+		background-position: center bottom;
+		background-size: 300%;
+		background-attachment: scroll;
+		margin-bottom: 0;
 	}
 	#pierwsza .zawartosc{
 		gap: 5vh;
 	}
 	#logo{
-		background-color: #fff;
-		color: #111;
-		height: 50vw;
-		width: 50vw;
-		font-size: 25vw;
+		position: relative;
+		top: 9vh;
+		right: 2vw;;
+		background-color: #c9c5b9;
+		color: #fff;
+		height: 26vw;
+		width: 26vw;
+		font-size: 5vw;
 	}
 	#pierwsza h1{
+		position: relative;
+		top: 12vh;
 		color: #fff;
-		font-size: 12vw;
+		font-size: 14vw;
 		text-align: center;
 		line-height: 1em;
+		white-space: nowrap;
 	}
 	#pierwsza a{
-		background-color: #fff;
-		padding: 2rem 5rem;
+		position: relative;
+		top: 15vh;
+		right: 60vw;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		background-color: #000;
+		padding: 1.2rem 3.5rem;
+		border-radius: 2rem;
 	}
 	#pierwsza a:hover{
 		background-color: crimson;
@@ -543,14 +568,63 @@ section{
 		padding: 2rem 5rem;
 	}
 	
+	#second {
+		margin: 0;
+		margin-bottom: -10vh;
+	}
+	
+	#second h1{
+		font-size: 4rem;
+		white-space: nowrap;
+	}
+	#second h2{
+		margin-top: 2rem;
+		font-size: 3.5rem;
+		white-space: nowrap;
+	}
+	
 	#druga{
 		background-color: #fff;
+		margin: 0;
+		
 	}
 	#druga .zawartosc{
 		padding: 0;
+		display: flex;
+		flex-direction: column;
 	}
+	#druga article img {
+		margin: 0;
+		width: 25%;
+	}
+	#druga article h2 {
+		text-transform: uppercase;
+		font-size: 2rem;
+		letter-spacing: 1rem;
+		font-weight: 500;
+	}
+	
 	#druga article p{
 		padding-bottom: 2rem;
+	}
+	
+	.button-mobile {
+		display: inline-block;
+	}
+	
+	.button-mobile {
+		color: #fff;
+		background-color: #aaa;
+		margin-top: 2rem;
+		width: 10rem;
+		padding: 1rem;
+		border-radius: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+	}
+	
+	#button {
+		display: none;
 	}
 	
 	#trzecia h3{
