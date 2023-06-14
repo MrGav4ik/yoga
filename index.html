@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Znacznik powodujący prawidłowe skalowanie dokumentu na urządzeniach mobilnych -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta charset="utf-8">
+	<title>Nazwisko Imię One Page</title>
+	<!-- 1. Resetujemy domyślne style HTML -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<!-- 2. Dołączamy własne style CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!-- NAWIGACJA MOBILE -->
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">
+			&times;
+		</a>
+		<ol onClick="zamknijMenu()">
+			<li><a href="#pierwsza">Home</a></li>
+			<li><a href="#druga">About</a></li>
+			<li><a href="#trzecia">Team</a></li>
+			<li><a href="#czwarta">Gallery</a></li>
+			<li><a href="#piata">Offer</a></li>
+			<li><a href="#szosta">Contact</a></li>
+			<li><a href="#siodma">Press</a></li>
+			<li><a href="#osma">PL</a></li>
+		</ol>
+	</div>
+	<span class="burger" onClick="otworzMenu()">
+		&#9776;
+	</span>
+	<script>
+		/* JavaScript */
+		/* Otwieranie MENU */
+		function otworzMenu(){
+			document.getElementById("MENU").style.width="100%";
+		}
+		
+		/* Zamykanie MENU */
+		function zamknijMenu(){
+			document.getElementById("MENU").style.width="0";
+		}
+	</script>
+	
+	<!-- NAWIGACJA DESKTOP -->
+	<nav>
+		<ol>
+			<li><a href="#pierwsza">Home</a></li>
+			<li><a href="#druga">About</a></li>
+			<li><a href="#trzecia">Team</a></li>
+			<li><a href="#czwarta">Gallery</a></li>
+			<li><a href="#piata">Offer</a></li>
+			<li><a href="#szosta">Contact</a></li>
+			<li><a href="#siodma">Press</a></li>
+			<li><a href="#osma">PL</a></li>
+		</ol>
+	</nav>
+	
+	<section id="pierwsza">
+		<div class="zawartosc">
+			<div id="logo">Yoga</div>
+			<h1>One Page</h1>
+			<a href="#druga">Dalej</a>
+		</div>
+	</section>
+	
+	<section id="druga">
+		<div class="zawartosc">
+			
+			<article>
+				<h2>Kolumna 1</h2>
+				<p>
+					Nihil sequi quibusdam officiis minus harum repellat expedita dolore veritatis esse, ratione earum sit sed impedit deleniti.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quod nisi ducimus voluptatum fuga voluptates obcaecati, id sint quasi labore explicabo minima, fugit nobis distinctio. Cumque eveniet, harum quos ad. Eum exercitationem distinctio porro cumque est tenetur, explicabo totam quisquam architecto officiis, non repudiandae saepe laudantium. Quae, qui quas incidunt.
+				</p>
+			</article>
+			
+			<article>
+				<h2>Kolumna 2</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus magnam consectetur dolorem et ducimus, eos veniam omnis. Deserunt numquam quidem, mollitia perspiciatis eum velit eius laborum fugiat incidunt rerum, optio sunt cum cumque sapiente sint.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat facere blanditiis voluptatibus molestiae dolorem, placeat sit minus dignissimos saepe, ab tempora? Voluptates ab amet, vel. Cupiditate iure consequatur dignissimos excepturi beatae doloribus nobis non accusamus repellat nulla obcaecati facere, tempora dolore delectus blanditiis dolores, error, eos eum recusandae ipsum qui. Quam nobis voluptatibus sint dolorum officiis consectetur, ratione maxime eum.
+				</p>
+			</article>
+			
+			<article>
+				<h2>Kolumna 3</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut placeat atque officia minima, enim soluta eos distinctio facere iusto assumenda!
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dignissimos laboriosam in rem labore, quibusdam, fugit, pariatur laudantium laborum at deleniti et! Omnis at, animi repudiandae recusandae molestiae dolorum consequatur dolores modi ipsa ipsum sunt id error quisquam explicabo sed, eos libero temporibus nam in deserunt, reiciendis iste a. Deserunt molestiae eum eaque, corrupti repudiandae.
+				</p>
+			</article>
+			
+		</div>
+	</section>
+	
+	<section id="trzecia">
+		<div class="zawartosc">
+			<h3>Responsywne strony internetowe</h3>
+		</div>
+	</section>
+	
+	<section id="czwarta">
+		<div class="zawartosc">
+			czwarta
+		</div>
+	</section>
+	
+	<section id="piata">
+		<div class="zawartosc">
+			<article>
+				<h5>Dane kontaktowe</h5>
+				<ol>
+					<li><span>Adres:</span> ul. ulica 12 </li>
+					<li>
+						<span>Telefon:</span> 
+						<a href="callto:+123123123">+12 12 123 456</a> 
+					</li>
+					<li>
+						<span>E-mail:</span> 
+						<a href="mailto:gg@gmail.com">gg@gmail.com</a> 
+					</li>
+				</ol>
+			</article>
+			<article>
+				<h5>Social Media</h5>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">Twitter</a></li>
+				</ul>
+			</article>
+			<article>
+				<h5>Formularz</h5>
+				<form>
+					<input type="text" placeholder="Imię" required>
+					<input type="text" placeholder="Nazwisko" required>
+					<input type="email" placeholder="E-mail" required>
+					<input type="password" placeholder="Hasło" required>
+					<textarea placeholder="Wpisz wiadomość..." required></textarea>
+					<hr>
+					<input type="checkbox" id="zgody" required>
+					<label for="zgody">Oświadczam, że zapoznałem/am się z <a href="#">regulaminem</a>.</label>
+					<hr>
+					<input type="reset" value="Wyczyść">
+					<input type="submit" value="Wyślij formularz">
+				</form>
+			</article>
+		</div>
+		
+	</section>
+	
+</body>
+</html>
+
+
+
