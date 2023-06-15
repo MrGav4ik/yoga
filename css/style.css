@@ -19,6 +19,10 @@ body{
 	line-height: 2.6rem;
 }
 
+.site-content-wrapper {
+ overflow-y: hidden;
+}
+
 /* Style nawigacji mobilnej */
 .burger{
 	position: fixed;
@@ -152,6 +156,9 @@ section{
 #yoga {
 	width: 2rem;
 }
+.media-container-mobile, .mobile, #logo-footer {
+	display: none;
+}
 
 #pierwsza h1{
 	position: absolute;
@@ -259,7 +266,7 @@ section{
 
 #button a {
 	color: #fff;
-	background-color: #aaa;
+	background-color: #716f75;
 	border-radius: 3rem;
 	padding: 0.5rem 2.2vw;
 }
@@ -301,24 +308,29 @@ section{
 #trzecia p {
 	text-align: center;
 }
-#trzecia .button a {
+
+#button-img {
 	color: #fff;
-	background-color: #aaa;
+	background-color: #716f75;
 	border-radius: 1.5rem;
 	padding: 1.5rem 2.4vw;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 }
-#btn1 {
+.btn1 {
 	position: relative;
-	top: 27rem;
-	right: 10rem;
+	bottom: 30rem;
+	left: 42rem;
 }
 
-#btn2 {
+.btn2 {
 	position: relative;
-	top: 53rem;
-	right: 10rem;
+	bottom: 1rem;
+	left: 27rem;
+}
+
+.btn3 {
+	display: none;
 }
 
 #czwarta{
@@ -434,7 +446,7 @@ section{
 
 #piata .copyright{
 	position: absolute;
-	bottom: -360vh;
+	bottom: -355vh;
 	left: 40%;
 	color: #fff;
 	font-size: 1.5rem;
@@ -522,11 +534,10 @@ section{
 	}
 	
 	#pierwsza{
-		margin-top: -29vh;
+		margin-top: -24vh;;
 		background-image: url("../img/bg1-full.jpg");
 		background-position: center bottom;
 		background-size: 300%;
-		background-attachment: scroll;
 		margin-bottom: 0;
 	}
 	#pierwsza .zawartosc{
@@ -534,7 +545,7 @@ section{
 	}
 	#logo{
 		position: relative;
-		top: 9vh;
+		top: 4vh;
 		right: 2vw;;
 		background-color: #c9c5b9;
 		color: #fff;
@@ -554,7 +565,7 @@ section{
 	#pierwsza a{
 		position: relative;
 		top: 15vh;
-		right: 60vw;
+		right: 64vw;
 		font-size: 2.5rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
@@ -614,7 +625,7 @@ section{
 	
 	.button-mobile {
 		color: #fff;
-		background-color: #aaa;
+		background-color: #716f75;
 		margin-top: 2rem;
 		width: 10rem;
 		padding: 1rem;
@@ -626,20 +637,160 @@ section{
 	#button {
 		display: none;
 	}
+	#trzecia .zawartosc {
+		display: inline-block;
+		position: relative;
+	}
+	#trzecia .img {
+		margin-bottom: -10rem;
+	}
 	
-	#trzecia h3{
-		font-size: 11vw;
+	#trzecia .img img{
+		width: 70rem;
+		height: 50rem;
+	}
+	#trzecia .img1 {
+		position: relative;
+		right: 27rem;
+	}
+	
+	#trzecia .img2 {
+		position: relative;
+		right: 16rem;
+	}
+	
+	#button-img {
+		display: inline-block;
+		text-align: center;
+		padding: 2.5rem 3rem;
+		font-size: 4rem;
+	}
+	
+	
+	.btn3 {
+		display: flex;
+		justify-content: center;
+		position:relative;
+		bottom: 60rem;
+		left: 8rem;
+	}
+	
+	.btn2 {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		bottom: 18rem;
+		left: 9rem;
+	}
+	.text {
+		position: relative;
+		left: 10vh;
+		
+	}
+	
+	#trzecia .text h3 {
+		white-space: nowrap;
+		font-weight: 500;
+		margin-bottom: 2rem;
+	}
+	
+	#trzecia .text p {
+		margin-bottom: -30rem;
+	}
+	#czwarta {
+		margin-bottom: -10rem;
+	}
+	
+	#czwarta .text, .prev, .next {
+		display: none;
+	}
+	
+	#czwarta .zawartosc h1 {
+		position: relative;
+		top: 12rem;
+		font-size: 2.5rem;
+		font-weight: 400;
+	}
+	#czwarta .zawartosc .dots {
+		position: relative;
+		top: 2rem;
+	}
+	#czwarta .caroulel #image {
+		width: 70rem;
+		height: 40rem;
 	}
 	
 	#piata{
 		padding: 5vh 2rem;
 		font-size: 1.6rem;
+
 	}
 	#piata .zawartosc{
 		width: 100%;
-		gap: 10vh;
+		padding-bottom: 34rem;
+		display: inline-block;
 	}
 	
+	#logo-footer {
+		position: relative;
+		bottom: 12rem;
+		left: 12rem;
+		background-color: #c9c5b9;
+		color: #fff;
+		font-size: 3rem;
+		height: 14rem;
+		width: 14rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		font-weight: 500;
+	}
+	#yoga-footer {
+		width: 4rem;
+	}
+	
+	#piata .footer-info .desktop {
+		display: none;
+	}
+	#piata .footer-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: -8rem;
+		line-height: 1rem;
+	}
+	
+	#piata .footer-info h1{
+		position: relative;
+		right: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	
+	#piata .footer-ul {
+		display: flex;
+		justify-content: center;
+	}
+	#piata .media-container{
+		display: none;
+	}
+	#piata .media-container-mobile {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 3rem 0 6rem;
+	}
+	
+	#piata .copyright {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		bottom: 5rem;
+		left: 0.5rem;
+	}
 	
 	/*
 	#piata input:not(#zgody), 

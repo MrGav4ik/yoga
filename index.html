@@ -124,12 +124,11 @@
 	<section id="trzecia">
 		<div class="zawartosc">
 			<div class="img">
-				<img src="img/img1.jpg" alt="img">
-				<img src="img/img2.jpg" alt="img">
-			</div>
-			<div class="button">
-				<a id="btn1" href="#czwarta">Studio</a>
-				<a id="btn2" href="#piata">Plener</a>
+				<img class="img1" src="img/img1.jpg" alt="img">
+				<img class="img2" src="img/img2.jpg" alt="img">
+				<a id="button-img" class="btn1" href="#czwarta">Studio</a>
+				<a id="button-img" class="btn3" href="#czwarta">Studio</a>
+				<a id="button-img" class="btn2" href="#piata">Plener</a>
 			</div>
 			<div class="text">
 				<h3>Lorem ipsum</h3>
@@ -161,8 +160,13 @@
 	
 	<section id="piata">
 		<div class="zawartosc">
-			<article>
-				<h1>Yoga</h1>
+			<div id="logo-footer">
+				<img id="yoga-footer" src="img/yoga.png">
+				Yoga
+			</div>
+			<article class="footer-info">
+				<h1 class="desktop">Yoga</h1>
+				<h1 class="mobile">Kontakt</h1>
 					<span>
 						ul. Wilcza 46<br>
 						00-679 Warszawa
@@ -194,7 +198,20 @@
 					<li><a href="#">Wydarzenia</li>
 				</ul>
 			</article>
-			<article class="copyright">YOGA STUDIO © 2023</article>
+			<div class="media-container-mobile">
+				<div class="right-side">
+					<ul class="media">
+						<li><a href="#"><img src="img/facebook.png"></a></li>
+						<li><a href="#"><img src="img/instagram.png"></a></li>
+					</div>
+				<div class="left-side">
+					<ul class="media">
+						<li><a href="#"><img src="img/youtube.png"></a></li>
+						<li><a href="#"><img src="img/telegram.png"></a></li>
+					</div>
+				</ul>
+			</div>
+			<div class="copyright">YOGA STUDIO © 2023</div>
 		</div>
 	</section>
 </body>
